@@ -1917,7 +1917,9 @@ pref("browser.reader.detectedFirstArticle", false);
 pref("reader.parse-node-limit", 0);
 
 // Enable Service workers for desktop on non-release builds
+#ifdef NIGHTLY_BUILD
 pref("dom.serviceWorkers.enabled", true);
+#endif
 
 pref("browser.pocket.enabled", false);
 pref("browser.pocket.api", "api.getpocket.com");
